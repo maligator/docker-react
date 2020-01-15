@@ -3,7 +3,7 @@ services:
     - docker
 
 before_install:
-    - docker build-f Dockerfile -f -t maligator/docker-react .
+    - docker build -f Dockerfile.dev -t maligator/docker-react .
 
 script:
     - docker run -e CI=true maligator/dockn test pm ruer-react n-- --coverage
